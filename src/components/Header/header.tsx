@@ -1,14 +1,8 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { useRouter } from "next/router";
-import { cn } from "@/lib/utils";
+import { ActiveLink } from "../Active-Link";
 
 export const Header = () => {
-  const router = useRouter();
-
-  const isHomePage = router.pathname === "/";
-  const isBlogPage = router.pathname.startsWith("/blog");
-
   return (
     <header
       className="
@@ -21,27 +15,15 @@ export const Header = () => {
           <Link href={"/"}>Logo</Link>
 
           <nav className="flex items-center gap-6">
-            <Link
-              href={"/"}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-blue-500",
-                isHomePage ? "text-blue-500" : "text-muted-foreground"
-              )}
-            >
-              Início
-            </Link>
+            <ActiveLink href={"/"}>Início</ActiveLink>
 
-            <Link
-              href={"/blog"}
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-blue-500",
-                isBlogPage ? "text-blue-500" : "text-muted-foreground"
-              )}
-            >
-              Blog
-            </Link>
+            <ActiveLink href={"/blog"}>Blog</ActiveLink>
 
-            <Button variant={"secondary"}>Começar</Button>
+            <Button variant={"secondary"} asChild>
+              <Link href={"/comecar"}>
+               Começar
+              </Link>
+            </Button>
           </nav>
         </div>
       </div>
