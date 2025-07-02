@@ -1,5 +1,6 @@
 import { FeatureSection } from "@/components/Feature-Section";
 import { HeroSection } from "@/components/Hero-Section";
+import { SupportSection } from "@/components/Support-Section";
 
 export default function Home() {
   return (
@@ -8,6 +9,8 @@ export default function Home() {
         <HeroSection />
 
         <FeatureSection />
+
+        <SupportSection />
       </article>
     </>
   );
