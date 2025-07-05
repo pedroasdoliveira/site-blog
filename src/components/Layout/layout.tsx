@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const Layout = ({ children }: LayoutProps) => {
   return (
     <div
-      className={` ${inter.className} relative flex min-h-screen flex-col bg-background/95 dark`}
+      className={`${inter.className} relative flex min-h-screen flex-col bg-gray-700`}
     >
       <Header />
 
