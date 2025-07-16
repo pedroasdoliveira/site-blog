@@ -1,5 +1,6 @@
 import { Search } from "@/components/Search";
 import { useRouter } from "next/router";
+import { PostCard } from "./components/PostCard";
 
 export const BlogList = () => {
   const router = useRouter();
@@ -32,6 +33,8 @@ export const BlogList = () => {
 
         <Search />
       </header>
+
+      <PostCard />
     </div>
   );
 };
